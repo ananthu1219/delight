@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Foodie Delight</title>
+    <style>
+        /* navbar */
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+        
+        .nav-link.active {
+            color: #007bff !important;
+            font-weight: 600;
+        }
+        /* food card */
+        .food {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .food-overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: bottom 0.4s ease;
+        }
+
+        .food:hover .food-overlay {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-utensils me-2"></i>Foodie Delight
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reservations">Reservations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- section -->
+<section id="home" style="position: relative; height: 100vh; background: url('./food.png') center/cover no-repeat;">
+    <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6);"></div>
+    <!-- content -->
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white position-relative">
+      <h1 class="display-2 fw-bold">Foodie Delight</h1>
+      <p class="lead mb-4">Serving love on every plate since 1998</p>
+      <a href="#menu" class="btn btn-warning btn-lg px-5 py-3">Explore Menu</a>
+    </div>
+  
+  </section>
+  <!-- Menu Section -->
+<section id="menu" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-5 fw-bold">Our Menu</h2>
+      <div class="row g-4">
+  
+        <!-- Dish 1 -->
+        <div class="col-md-4">
+          <div class="food card h-100 shadow-sm">
+            <img src="./dish1.png" class="card-img-top" alt="Pasta">
+            <div class="card-body">
+              <h5 class="card-title">Classic Italian Pasta</h5>
+              <p class="card-text">Freshly made pasta tossed in rich tomato sauce with herbs.</p>
+              <p class="fw-bold">₹1,499</p>
+            </div>
+            <div class="food-overlay">View Details</div>
+          </div>
+        </div>
+  
+        <!-- Dish 2 -->
+        <div class="col-md-4">
+          <div class="food card h-100 shadow-sm">
+            <img src="./dish2.png" class="card-img-top" alt="Steak">
+            <div class="card-body">
+              <h5 class="card-title">Grilled Ribeye Steak</h5>
+              <p class="card-text">Juicy steak served with seasonal vegetables and garlic butter.</p>
+              <p class="fw-bold">₹1,999</p>
+            </div>
+            <div class="food-overlay">View Details</div>
+          </div>
+        </div>
+  
+        <!-- Dish 3 -->
+        <div class="col-md-4">
+          <div class="food card h-100 shadow-sm">
+            <img src="./dish3.png" class="card-img-top" alt="Dessert">
+            <div class="card-body">
+              <h5 class="card-title">Chocolate Lava Cake</h5>
+              <p class="card-text">Warm chocolate cake with molten center and vanilla ice cream.</p>
+              <p class="fw-bold">₹750</p>
+            </div>
+            <div class="food-overlay">View Details</div>
+          </div>
+        </div>
+
+        <!-- Dish 4 -->
+       <div class="col-md-4">
+         <div class="food card h-100 shadow-sm">
+           <img src="./dish4.png" class="card-img-top" alt="Pizza">
+           <div class="card-body">
+             <h5 class="card-title">Wood-Fired Margherita Pizza</h5>
+             <p class="card-text">Thin crust pizza topped with fresh mozzarella, basil, and tomato sauce.</p>
+             <p class="fw-bold">₹899</p>
+           </div>
+           <div class="food-overlay">View Details</div>
+         </div>
+       </div>
+
+        <!-- Dish 5 -->
+       <div class="col-md-4">
+         <div class="food card h-100 shadow-sm">
+           <img src="./dish5.png" class="card-img-top" alt="Burger">
+           <div class="card-body">
+             <h5 class="card-title">Gourmet Beef Burger</h5>
+             <p class="card-text">Juicy beef patty, cheddar cheese, lettuce, and special sauce.</p>
+             <p class="fw-bold">₹799</p>
+           </div>
+           <div class="food-overlay">View Details</div>
+         </div>
+       </div>
+
+        <!-- Dish 6 -->
+        <div class="col-md-4">
+            <div class="food card h-100 shadow-sm">
+                <img src="./dish6.png" class="card-img-top" alt="Soup">
+                <div class="card-body">
+                    <h5 class="card-title">Creamy Mushroom Soup</h5>
+                    <p class="card-text">Smooth and rich mushroom soup served with garlic bread.</p>
+                    <p class="fw-bold">₹499</p>
+                </div>
+           <div class="food-overlay">View Details</div>
+        </div>
+       </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel -->
+<section id="specials" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-5 fw-bold">Chef’s Specials</h2>
+  
+      <div id="offersCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+  
+          <!-- Offer 1 -->
+          <div class="carousel-item active">
+            <img src="./special1.png" class="d-block w-100 rounded" alt="Special Dish 1" style="max-height: 500px; object-fit: cover;">
+          </div>
+  
+          <!-- Offer 2 -->
+          <div class="carousel-item">
+            <img src="./special2.png" class="d-block w-100 rounded" alt="Special Dish 2" style="max-height: 500px; object-fit: cover;">
+          </div>
+  
+          <!-- Offer 3 -->
+          <div class="carousel-item">
+            <img src="./special3.png" class="d-block w-100 rounded" alt="Special Dish 3" style="max-height: 500px; object-fit: cover;">
+          </div>
+  
+        </div>
+  
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#offersCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#offersCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+    <!-- Simple Reservation Form -->
+<section id="reservation" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Reserve a Table</h2>
+  
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form class="p-4 border rounded bg-light">
+  
+            <input type="text" class="form-control mb-3" placeholder="Full Name" required>
+            <input type="email" class="form-control mb-3" placeholder="Email Address" required>
+            <input type="tel" class="form-control mb-3" placeholder="Phone Number" required>
+  
+            <div class="d-flex mb-3 gap-2">
+              <input type="date" class="form-control" required>
+              <input type="time" class="form-control" required>
+            </div>
+  
+            <select class="form-select mb-3" required>
+              <option value="">Number of Guests</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4+</option>
+            </select>
+  
+            <button type="submit" class="btn btn-warning w-100 fw-bold">Book Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+</body>
+</html>
